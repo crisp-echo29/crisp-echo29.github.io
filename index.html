@@ -1,0 +1,1537 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>尤果网模特写真 - 官方品牌门户,原创影像内容生态</title>
+<meta name="description" content="尤果网模特写真官方网站，专注原创模特写真影像内容生态，汇聚专业创作者与品牌伙伴，提供高清精品内容、创作幕后与行业观察。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23222a3a'/%3E%3Ccircle cx='32' cy='26' r='11' fill='%23e6b17e'/%3E%3Cpath d='M14 54c4-12 12-18 18-18s14 6 18 18z' fill='%23e6b17e'/%3E%3C/svg%3E">
+<style>
+:root{
+  --yg-ink:#1c2230;
+  --yg-ink-soft:#4a5266;
+  --yg-paper:#f6f7fb;
+  --yg-white:#ffffff;
+  --yg-line:#e3e7f0;
+  --yg-gold:#c98a4b;
+  --yg-gold-soft:#f0dcc4;
+  --yg-blue:#3f5c8a;
+  --yg-blue-soft:#e6ecf7;
+  --yg-plum:#7a4a68;
+  --yg-shadow:0 10px 30px rgba(28,34,48,.09);
+  --yg-radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:132px}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  color:var(--yg-ink);background:var(--yg-paper);
+  line-height:1.75;-webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+ul{list-style:none}
+
+/* 吸顶容器：公告条 + 页头 */
+.yg-sticky-top{position:sticky;top:0;z-index:90}
+/* 公告条 */
+.yg-newsbar{
+  background:linear-gradient(90deg,#20283a,#33405c 55%,#20283a);
+  color:#eef1f8;font-size:13px;letter-spacing:.2px;
+}
+.yg-newsbar-inner{
+  max-width:1200px;margin:0 auto;padding:7px 20px;
+  display:flex;align-items:center;gap:12px;overflow:hidden;
+}
+.yg-newsbar-tag{
+  flex:none;background:var(--yg-gold);color:#20180d;font-weight:700;
+  padding:1px 9px;border-radius:99px;font-size:11px;letter-spacing:1px;
+}
+.yg-newsbar-track{position:relative;flex:1;overflow:hidden;height:22px}
+.yg-newsbar-item{
+  position:absolute;inset:0;display:flex;align-items:center;gap:8px;
+  opacity:0;transform:translateY(10px);transition:opacity .5s,transform .5s;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.yg-newsbar-item.is-active{opacity:1;transform:translateY(0)}
+.yg-newsbar-item em{color:var(--yg-gold-soft);font-style:normal}
+.yg-newsbar-more{flex:none;font-size:12px;color:#c4cde0;border-bottom:1px dashed #6d7a95;padding-bottom:1px}
+
+/* 页头 */
+.yg-header{background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--yg-line)}
+.yg-header-inner{
+  max-width:1200px;margin:0 auto;padding:12px 20px;
+  display:flex;align-items:center;gap:26px;
+}
+.yg-logo{display:flex;align-items:center;gap:10px;flex:none}
+.yg-logo-mark{
+  width:42px;height:42px;border-radius:12px;flex:none;
+  background:linear-gradient(140deg,#2b3448,#4d5f86 60%,#c98a4b);
+  display:grid;place-items:center;color:#fff;font-weight:800;font-size:18px;letter-spacing:1px;
+  box-shadow:0 6px 16px rgba(43,52,72,.28);
+}
+.yg-logo-text strong{display:block;font-size:18px;letter-spacing:1px;line-height:1.2}
+.yg-logo-text span{display:block;font-size:11px;color:var(--yg-ink-soft);letter-spacing:2.6px}
+.yg-nav{display:flex;gap:4px;flex:1;flex-wrap:wrap}
+.yg-nav a{
+  padding:8px 13px;border-radius:9px;font-size:15px;color:var(--yg-ink-soft);
+  transition:background .2s,color .2s;position:relative;
+}
+.yg-nav a:hover,.yg-nav a.is-current{background:var(--yg-blue-soft);color:var(--yg-blue);font-weight:600}
+.yg-header-tools{display:flex;align-items:center;gap:10px;flex:none}
+.yg-search{
+  display:flex;align-items:center;gap:6px;background:var(--yg-paper);
+  border:1px solid var(--yg-line);border-radius:99px;padding:6px 6px 6px 14px;
+}
+.yg-search input{
+  border:none;background:transparent;outline:none;width:150px;font-size:14px;color:var(--yg-ink);
+}
+.yg-search button{
+  background:var(--yg-ink);color:#fff;border-radius:99px;padding:5px 14px;font-size:13px;
+}
+.yg-search-tip{
+  font-size:12px;color:var(--yg-gold);min-height:18px;text-align:right;
+  max-width:1200px;margin:0 auto;padding:0 22px 4px;
+}
+.yg-menu-toggle{
+  display:none;width:42px;height:42px;border-radius:10px;border:1px solid var(--yg-line);
+  background:#fff;position:relative;
+}
+.yg-menu-toggle span{
+  position:absolute;left:11px;right:11px;height:2px;background:var(--yg-ink);transition:.25s;
+}
+.yg-menu-toggle span:nth-child(1){top:14px}
+.yg-menu-toggle span:nth-child(2){top:20px}
+.yg-menu-toggle span:nth-child(3){top:26px}
+.yg-menu-toggle.is-open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.yg-menu-toggle.is-open span:nth-child(2){opacity:0}
+.yg-menu-toggle.is-open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+.yg-wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.yg-section{padding:64px 0}
+.yg-section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:30px;flex-wrap:wrap}
+.yg-eyebrow{
+  font-size:12px;letter-spacing:3px;color:var(--yg-gold);font-weight:700;text-transform:uppercase;
+  display:flex;align-items:center;gap:8px;margin-bottom:6px;
+}
+.yg-eyebrow::before{content:"";width:22px;height:2px;background:var(--yg-gold);display:block}
+.yg-section-head h2{font-size:27px;letter-spacing:.5px;line-height:1.35}
+.yg-section-head p{font-size:14px;color:var(--yg-ink-soft);max-width:520px}
+.yg-btn{
+  display:inline-flex;align-items:center;gap:8px;border-radius:99px;padding:11px 24px;
+  font-size:15px;font-weight:600;transition:transform .2s,box-shadow .2s,background .2s;
+}
+.yg-btn-primary{background:var(--yg-ink);color:#fff;box-shadow:0 8px 20px rgba(28,34,48,.22)}
+.yg-btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(28,34,48,.28)}
+.yg-btn-ghost{border:1px solid var(--yg-line);color:var(--yg-ink);background:#fff}
+.yg-btn-ghost:hover{border-color:var(--yg-gold);color:var(--yg-gold)}
+.yg-btn-gold{background:linear-gradient(120deg,#c98a4b,#e0ab72);color:#221a0f;box-shadow:0 8px 20px rgba(201,138,75,.3)}
+.yg-btn-gold:hover{transform:translateY(-2px)}
+
+/* 首屏 */
+.yg-hero{padding:52px 0 12px;position:relative;overflow:hidden}
+.yg-hero-grid{display:grid;grid-template-columns:6fr 4fr;gap:34px;align-items:center}
+.yg-hero-tag{
+  display:inline-flex;align-items:center;gap:8px;background:var(--yg-blue-soft);
+  color:var(--yg-blue);font-size:13px;font-weight:600;padding:6px 14px;border-radius:99px;margin-bottom:16px;
+}
+.yg-hero h1{
+  font-size:clamp(34px,4.6vw,52px);line-height:1.18;letter-spacing:1px;margin-bottom:14px;
+}
+.yg-hero h1 em{
+  font-style:normal;color:var(--yg-gold);position:relative;
+}
+.yg-hero-sub{font-size:17px;color:var(--yg-ink-soft);margin-bottom:18px;max-width:600px}
+.yg-hero-desc{font-size:14.5px;color:var(--yg-ink-soft);line-height:1.9;max-width:620px}
+.yg-hero-desc strong{color:var(--yg-ink)}
+.yg-hero-actions{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+.yg-hero-stats{display:flex;gap:28px;margin-top:32px;flex-wrap:wrap}
+.yg-stat b{display:block;font-size:27px;color:var(--yg-ink);letter-spacing:.5px}
+.yg-stat b small{font-size:14px;color:var(--yg-ink-soft);font-weight:500;margin-left:3px}
+.yg-stat span{font-size:13px;color:var(--yg-ink-soft)}
+.yg-hero-visual{position:relative}
+.yg-hero-frame{
+  border-radius:24px;overflow:hidden;box-shadow:var(--yg-shadow);position:relative;aspect-ratio:4/5;background:#222a3a;
+}
+.yg-hero-frame img{width:100%;height:100%;object-fit:cover}
+.yg-hero-frame::after{
+  content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,25,36,0) 46%,rgba(20,25,36,.7));
+}
+.yg-hero-frame-info{position:absolute;left:18px;right:18px;bottom:16px;color:#fff;z-index:2}
+.yg-hero-frame-info span{font-size:12px;letter-spacing:2px;color:#f0dcc4}
+.yg-hero-frame-info strong{display:block;font-size:17px;margin-top:2px}
+.yg-hero-float{
+  position:absolute;left:-16px;bottom:44px;background:#fff;border-radius:14px;
+  box-shadow:var(--yg-shadow);padding:12px 16px;font-size:13px;z-index:3;
+}
+.yg-hero-float b{display:block;font-size:16px;color:var(--yg-gold)}
+.yg-hero-float span{color:var(--yg-ink-soft);font-size:12px}
+
+/* 关键词解析 */
+.yg-about{background:#fff;border-top:1px solid var(--yg-line);border-bottom:1px solid var(--yg-line)}
+.yg-about-grid{display:grid;grid-template-columns:5fr 7fr;gap:44px;align-items:start}
+.yg-about-aside{position:sticky;top:150px}
+.yg-about-aside h2{font-size:28px;line-height:1.4;margin-bottom:14px}
+.yg-about-aside p{font-size:14px;color:var(--yg-ink-soft);margin-bottom:20px}
+.yg-badge-list{display:flex;flex-wrap:wrap;gap:8px}
+.yg-badge{
+  font-size:12.5px;padding:5px 12px;border-radius:99px;background:var(--yg-paper);
+  border:1px solid var(--yg-line);color:var(--yg-ink-soft);
+}
+.yg-about-text h3{font-size:18px;margin:22px 0 8px;color:var(--yg-ink)}
+.yg-about-text h3:first-child{margin-top:0}
+.yg-about-text p{font-size:14.8px;color:#3c4458;line-height:1.95;margin-bottom:6px;text-align:justify}
+.yg-about-text p strong{color:var(--yg-ink)}
+.yg-about-quote{
+  margin-top:24px;padding:18px 22px;border-left:3px solid var(--yg-gold);
+  background:var(--yg-paper);border-radius:0 12px 12px 0;font-size:14.5px;color:var(--yg-ink-soft);
+}
+
+/* 焦点内容 */
+.yg-focus-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:22px}
+.yg-focus-main{
+  position:relative;border-radius:var(--yg-radius);overflow:hidden;box-shadow:var(--yg-shadow);
+  aspect-ratio:16/10;background:#1f2634;
+}
+.yg-focus-main img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.yg-focus-main:hover img{transform:scale(1.04)}
+.yg-focus-main-info{
+  position:absolute;left:0;right:0;bottom:0;padding:26px 24px 22px;color:#fff;
+  background:linear-gradient(180deg,rgba(15,19,28,0) 0%,rgba(15,19,28,.82) 78%);
+}
+.yg-focus-main-info .yg-chip{background:rgba(255,255,255,.16);color:#fff;border-color:transparent}
+.yg-focus-main-info h3{font-size:21px;margin:8px 0 6px;line-height:1.4}
+.yg-focus-main-info p{font-size:13.5px;color:#ccd3e2;max-width:92%}
+.yg-focus-side{display:grid;gap:16px}
+.yg-focus-mini{
+  display:grid;grid-template-columns:132px 1fr;gap:14px;background:#fff;border-radius:14px;
+  padding:10px;border:1px solid var(--yg-line);transition:transform .2s,box-shadow .2s;
+}
+.yg-focus-mini:hover{transform:translateY(-3px);box-shadow:var(--yg-shadow)}
+.yg-focus-mini-thumb{border-radius:10px;overflow:hidden;aspect-ratio:16/10;background:#2a3345;position:relative}
+.yg-focus-mini-thumb img{width:100%;height:100%;object-fit:cover}
+.yg-focus-mini-body h4{font-size:15px;line-height:1.45;margin-bottom:6px}
+.yg-focus-mini-body p{font-size:12.5px;color:var(--yg-ink-soft);line-height:1.6}
+.yg-focus-mini-meta{font-size:12px;color:#8890a4;margin-top:6px}
+
+/* 视频卡片通用 */
+.yg-chip{
+  display:inline-block;font-size:11.5px;padding:2px 9px;border-radius:99px;
+  background:var(--yg-paper);border:1px solid var(--yg-line);color:var(--yg-ink-soft);
+}
+.yg-video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.yg-video-card{
+  background:#fff;border-radius:var(--yg-radius);overflow:hidden;border:1px solid var(--yg-line);
+  display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s;
+}
+.yg-video-card:hover{transform:translateY(-5px);box-shadow:var(--yg-shadow)}
+.yg-video-cover{position:relative;aspect-ratio:16/9;background:#222a3a;overflow:hidden}
+.yg-video-cover img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.yg-video-card:hover .yg-video-cover img{transform:scale(1.06)}
+.yg-video-cover .yg-chip{position:absolute;top:10px;left:10px;background:rgba(255,255,255,.9);backdrop-filter:blur(4px)}
+.yg-play{
+  position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;
+}
+.yg-play i{
+  width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.86);
+  display:grid;place-items:center;box-shadow:0 4px 14px rgba(0,0,0,.25);transition:transform .25s;
+}
+.yg-play i::after{
+  content:"";border-style:solid;border-width:7px 0 7px 12px;
+  border-color:transparent transparent transparent #1c2230;margin-left:3px;
+}
+.yg-video-card:hover .yg-play i{transform:scale(1.12)}
+.yg-video-body{padding:15px 16px 16px;display:flex;flex-direction:column;flex:1}
+.yg-video-body h3{font-size:16px;line-height:1.45;margin-bottom:7px}
+.yg-video-body p{font-size:13px;color:var(--yg-ink-soft);line-height:1.65;flex:1}
+.yg-video-meta{
+  display:flex;align-items:center;justify-content:space-between;gap:8px;
+  margin-top:12px;padding-top:11px;border-top:1px dashed var(--yg-line);font-size:12.5px;color:#7f8798;
+}
+.yg-author{display:flex;align-items:center;gap:6px}
+.yg-avatar{
+  width:24px;height:24px;border-radius:50%;display:grid;place-items:center;
+  font-size:11px;font-weight:700;color:#fff;flex:none;
+}
+.yg-video-actions{display:flex;gap:6px}
+.yg-icon-btn{
+  display:inline-flex;align-items:center;gap:4px;font-size:12.5px;color:#7f8798;
+  padding:3px 8px;border-radius:8px;transition:.2s;
+}
+.yg-icon-btn:hover{background:var(--yg-paper);color:var(--yg-gold)}
+.yg-icon-btn.is-on{color:var(--yg-gold)}
+.yg-icon-btn .yg-count{font-variant-numeric:tabular-nums}
+
+/* 专题 */
+.yg-topic-bg{background:linear-gradient(180deg,#fff,var(--yg-paper))}
+.yg-topic-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.yg-topic-card{
+  border-radius:var(--yg-radius);overflow:hidden;position:relative;min-height:250px;
+  display:flex;flex-direction:column;justify-content:flex-end;padding:18px;color:#fff;
+  box-shadow:0 8px 22px rgba(28,34,48,.14);transition:transform .25s;
+}
+.yg-topic-card:hover{transform:translateY(-5px)}
+.yg-topic-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.yg-topic-card::after{
+  content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,rgba(16,20,30,.05) 30%,rgba(16,20,30,.86) 100%);
+}
+.yg-topic-card>*{position:relative;z-index:2}
+.yg-topic-card .yg-chip{background:rgba(255,255,255,.18);color:#fff;border-color:rgba(255,255,255,.3);align-self:flex-start;margin-bottom:auto}
+.yg-topic-card h3{font-size:17px;line-height:1.4;margin-bottom:5px}
+.yg-topic-card p{font-size:12.5px;color:#d3d9e6;line-height:1.55}
+.yg-topic-card .yg-topic-state{font-size:11.5px;color:var(--yg-gold-soft);margin-top:8px;display:inline-block}
+
+/* 创作者 */
+.yg-creator-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.yg-creator-card{
+  background:#fff;border:1px solid var(--yg-line);border-radius:var(--yg-radius);
+  padding:22px 18px;text-align:center;transition:transform .25s,box-shadow .25s;
+}
+.yg-creator-card:hover{transform:translateY(-4px);box-shadow:var(--yg-shadow)}
+.yg-creator-avatar{
+  width:72px;height:72px;border-radius:50%;margin:0 auto 12px;display:grid;place-items:center;
+  font-size:26px;font-weight:800;color:#fff;box-shadow:0 8px 18px rgba(28,34,48,.2);
+}
+.yg-creator-card h3{font-size:16px;margin-bottom:3px}
+.yg-creator-role{font-size:12.5px;color:var(--yg-gold);font-weight:600;margin-bottom:8px}
+.yg-creator-card p{font-size:12.5px;color:var(--yg-ink-soft);line-height:1.65}
+.yg-creator-stats{display:flex;justify-content:center;gap:16px;margin-top:12px;font-size:12px;color:#7f8798;border-top:1px dashed var(--yg-line);padding-top:11px}
+.yg-creator-stats b{display:block;color:var(--yg-ink);font-size:14px}
+.yg-creator-more{margin-top:10px;font-size:12.5px;color:var(--yg-blue);border-bottom:1px dashed var(--yg-blue);display:inline-block}
+
+/* 作品墙 */
+.yg-wall{background:#1d2433;color:#eef1f8;border-radius:26px;padding:42px 36px}
+.yg-wall .yg-section-head h2{color:#fff}
+.yg-wall .yg-section-head p{color:#a7b0c4}
+.yg-wall .yg-eyebrow{color:var(--yg-gold-soft)}
+.yg-wall .yg-eyebrow::before{background:var(--yg-gold-soft)}
+.yg-wall-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.yg-wall-item{
+  border-radius:12px;overflow:hidden;position:relative;background:#2c3546;
+  transition:transform .25s;
+}
+.yg-wall-item:hover{transform:translateY(-4px)}
+.yg-wall-item img{width:100%;height:100%;object-fit:cover}
+.yg-wall-item span{
+  position:absolute;left:0;right:0;bottom:0;padding:14px 10px 8px;font-size:11.5px;
+  color:#fff;background:linear-gradient(180deg,transparent,rgba(10,13,20,.86));
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.yg-wall-item.w-lg{grid-column:span 2;grid-row:span 2;aspect-ratio:auto;min-height:220px}
+.yg-wall-item.w-md{grid-column:span 2;aspect-ratio:4/3}
+.yg-wall-item.w-sm{grid-column:span 2;aspect-ratio:4/3}
+.yg-wall-item.w-sm2{grid-column:span 3;aspect-ratio:16/9}
+
+/* 评论 */
+.yg-review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.yg-review-card{
+  background:#fff;border:1px solid var(--yg-line);border-radius:var(--yg-radius);padding:20px;
+  display:flex;flex-direction:column;gap:10px;
+}
+.yg-review-card:nth-child(even){background:linear-gradient(180deg,#fff, #fbf7f1)}
+.yg-review-top{display:flex;align-items:center;gap:10px}
+.yg-review-top b{font-size:14px}
+.yg-review-top span{font-size:12px;color:#8b93a6}
+.yg-review-card p{font-size:13.5px;color:#3c4458;line-height:1.8}
+.yg-review-stars{color:var(--yg-gold);font-size:13px;letter-spacing:2px}
+
+/* 更新日志 + 辅助 */
+.yg-log-list{border-left:2px solid var(--yg-line);margin-left:8px;display:grid;gap:20px}
+.yg-log-item{position:relative;padding-left:26px}
+.yg-log-item::before{
+  content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;
+  background:#fff;border:2px solid var(--yg-gold);
+}
+.yg-log-item time{font-size:12px;color:var(--yg-gold);font-weight:600;letter-spacing:.5px}
+.yg-log-item h3{font-size:15.5px;margin:3px 0 4px}
+.yg-log-item p{font-size:13px;color:var(--yg-ink-soft);line-height:1.7}
+
+.yg-partner-strip{display:flex;flex-wrap:wrap;gap:12px}
+.yg-partner{
+  flex:1 1 150px;text-align:center;padding:16px 12px;background:#fff;border:1px solid var(--yg-line);
+  border-radius:12px;font-size:13.5px;color:var(--yg-ink-soft);font-weight:600;letter-spacing:.5px;
+  transition:.2s;
+}
+.yg-partner:hover{color:var(--yg-gold);border-color:var(--yg-gold-soft);background:#fffdf9}
+
+/* FAQ */
+.yg-faq{display:grid;gap:10px}
+.yg-faq details{
+  background:#fff;border:1px solid var(--yg-line);border-radius:12px;padding:0 18px;
+  transition:border-color .2s;
+}
+.yg-faq details[open]{border-color:var(--yg-gold-soft);box-shadow:0 6px 18px rgba(201,138,75,.09)}
+.yg-faq summary{
+  cursor:pointer;list-style:none;padding:15px 0;font-size:15px;font-weight:600;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+}
+.yg-faq summary::-webkit-details-marker{display:none}
+.yg-faq summary::after{content:"+";font-size:20px;color:var(--yg-gold);flex:none;line-height:1}
+.yg-faq details[open] summary::after{content:"–"}
+.yg-faq details p{padding:0 0 16px;font-size:13.5px;color:var(--yg-ink-soft);line-height:1.8}
+
+/* 联系 / 投稿 */
+.yg-contact{
+  background:linear-gradient(120deg,#232b3d,#3a4664 60%,#7a5a45);border-radius:26px;
+  padding:44px 40px;color:#fff;display:grid;grid-template-columns:1.2fr 1fr;gap:34px;align-items:center;
+}
+.yg-contact h2{font-size:26px;margin-bottom:10px;line-height:1.35}
+.yg-contact p{font-size:14px;color:#cdd4e3;line-height:1.85}
+.yg-contact-list{display:grid;gap:10px;margin-top:18px;font-size:13.5px;color:#dde2ee}
+.yg-contact-list li{display:flex;gap:10px;align-items:baseline}
+.yg-contact-list b{color:var(--yg-gold-soft);font-weight:600;flex:none;width:70px}
+.yg-contact-actions{display:flex;flex-direction:column;gap:12px}
+.yg-contact-actions .yg-btn{justify-content:center}
+
+/* 页脚 */
+.yg-footer{background:#161b26;color:#a9b2c6;padding:52px 0 26px;margin-top:10px}
+.yg-footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px}
+.yg-footer h3{color:#fff;font-size:15px;margin-bottom:14px;letter-spacing:.5px}
+.yg-footer p,.yg-footer li{font-size:13px;line-height:1.9}
+.yg-footer ul{display:grid;gap:6px}
+.yg-footer a:hover{color:var(--yg-gold-soft)}
+.yg-footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.yg-footer-brand .yg-logo-mark{width:36px;height:36px;font-size:15px;border-radius:10px}
+.yg-footer-bottom{
+  border-top:1px solid rgba(255,255,255,.1);margin-top:34px;padding-top:18px;
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:#798299;
+}
+
+/* 回到顶部 */
+.yg-top-btn{
+  position:fixed;right:22px;bottom:26px;width:46px;height:46px;border-radius:50%;
+  background:var(--yg-ink);color:#fff;display:grid;place-items:center;font-size:18px;
+  box-shadow:0 10px 24px rgba(28,34,48,.3);opacity:0;visibility:hidden;transition:.3s;z-index:80;
+}
+.yg-top-btn.is-show{opacity:1;visibility:visible}
+.yg-top-btn:hover{background:var(--yg-gold);color:#221a0f}
+
+/* Toast */
+.yg-toast{
+  position:fixed;left:50%;bottom:44px;transform:translate(-50%,20px);
+  background:rgba(22,27,38,.94);color:#fff;padding:11px 22px;border-radius:99px;
+  font-size:13.5px;opacity:0;visibility:hidden;transition:.3s;z-index:120;pointer-events:none;
+  box-shadow:0 10px 30px rgba(0,0,0,.28);
+}
+.yg-toast.is-show{opacity:1;visibility:visible;transform:translate(-50%,0)}
+
+/* 弹窗 */
+.yg-modal{
+  position:fixed;inset:0;z-index:130;display:grid;place-items:center;padding:20px;
+  background:rgba(18,23,33,.62);backdrop-filter:blur(4px);
+  opacity:0;visibility:hidden;transition:.25s;
+}
+.yg-modal.is-open{opacity:1;visibility:visible}
+.yg-modal-box{
+  background:#fff;border-radius:20px;max-width:520px;width:100%;padding:30px 28px 26px;
+  position:relative;transform:translateY(14px);transition:.25s;box-shadow:0 24px 60px rgba(0,0,0,.3);
+  max-height:86vh;overflow:auto;
+}
+.yg-modal.is-open .yg-modal-box{transform:translateY(0)}
+.yg-modal-box h3{font-size:20px;margin-bottom:8px}
+.yg-modal-box > p{font-size:13.5px;color:var(--yg-ink-soft);line-height:1.8;margin-bottom:16px}
+.yg-modal-close{
+  position:absolute;top:14px;right:16px;width:32px;height:32px;border-radius:50%;
+  background:var(--yg-paper);color:var(--yg-ink-soft);font-size:18px;line-height:1;
+}
+.yg-modal-close:hover{background:var(--yg-gold-soft);color:var(--yg-gold)}
+.yg-form{display:grid;gap:12px}
+.yg-form label{font-size:13px;font-weight:600;color:var(--yg-ink)}
+.yg-form input,.yg-form textarea,.yg-form select{
+  width:100%;border:1px solid var(--yg-line);border-radius:10px;padding:10px 12px;
+  font-size:14px;font-family:inherit;outline:none;background:var(--yg-paper);color:var(--yg-ink);
+}
+.yg-form input:focus,.yg-form textarea:focus,.yg-form select:focus{border-color:var(--yg-gold);background:#fff}
+.yg-form textarea{min-height:92px;resize:vertical}
+.yg-form .yg-btn{justify-content:center;margin-top:4px}
+
+/* 搜索高亮提示 */
+.yg-search-match{animation:ygPulse .8s ease}
+@keyframes ygPulse{
+  0%{box-shadow:0 0 0 0 rgba(201,138,75,.5)}
+  100%{box-shadow:0 0 0 14px rgba(201,138,75,0)}
+}
+
+@media (max-width:1080px){
+  .yg-hero-grid{grid-template-columns:1fr;gap:28px}
+  .yg-hero-visual{max-width:440px}
+  .yg-about-grid{grid-template-columns:1fr;gap:26px}
+  .yg-about-aside{position:static}
+  .yg-focus-grid{grid-template-columns:1fr}
+  .yg-video-grid{grid-template-columns:repeat(2,1fr)}
+  .yg-topic-grid{grid-template-columns:repeat(2,1fr)}
+  .yg-creator-grid{grid-template-columns:repeat(2,1fr)}
+  .yg-review-grid{grid-template-columns:repeat(2,1fr)}
+  .yg-contact{grid-template-columns:1fr;padding:34px 26px}
+  .yg-footer-grid{grid-template-columns:1fr 1fr}
+  .yg-wall-grid{grid-template-columns:repeat(4,1fr)}
+  .yg-wall-item.w-lg{grid-column:span 4;min-height:200px}
+  .yg-wall-item.w-md{grid-column:span 2}
+  .yg-wall-item.w-sm{grid-column:span 2}
+  .yg-wall-item.w-sm2{grid-column:span 4}
+}
+@media (max-width:760px){
+  html{scroll-padding-top:112px}
+  .yg-header-inner{flex-wrap:wrap;gap:12px}
+  .yg-nav{
+    display:none;width:100%;order:4;flex-direction:column;gap:2px;
+    padding-top:8px;border-top:1px solid var(--yg-line);
+  }
+  .yg-nav.is-open{display:flex}
+  .yg-nav a{padding:10px 12px}
+  .yg-menu-toggle{display:block}
+  .yg-header-tools{margin-left:auto}
+  .yg-search input{width:96px}
+  .yg-section{padding:46px 0}
+  .yg-video-grid{grid-template-columns:1fr}
+  .yg-creator-grid{grid-template-columns:1fr}
+  .yg-review-grid{grid-template-columns:1fr}
+  .yg-topic-grid{grid-template-columns:1fr}
+  .yg-wall{padding:28px 20px}
+  .yg-wall-grid{grid-template-columns:1fr 1fr;gap:10px}
+  .yg-wall-item.w-lg{grid-column:span 2}
+  .yg-wall-item.w-md,.yg-wall-item.w-sm{grid-column:span 1}
+  .yg-wall-item.w-sm2{grid-column:span 2}
+  .yg-footer-grid{grid-template-columns:1fr}
+  .yg-hero-stats{gap:20px}
+  .yg-newsbar-inner{padding:7px 14px}
+  .yg-newsbar-more{display:none}
+  .yg-focus-mini{grid-template-columns:110px 1fr}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="yg-sticky-top">
+  <!-- 公告条 -->
+  <div class="yg-newsbar" aria-label="品牌更新公告">
+    <div class="yg-newsbar-inner">
+      <span class="yg-newsbar-tag">官方发布</span>
+      <div class="yg-newsbar-track">
+        <div class="yg-newsbar-item is-active">
+          <em>10月新企划</em>《光影之间》尤果网模特写真专题季正式上线，12位创作者联合企划
+        </div>
+        <div class="yg-newsbar-item">
+          <em>赛事报名</em>2026 尤果影像创意挑战赛开启投稿，作品上传通道已开放
+        </div>
+        <div class="yg-newsbar-item">
+          <em>内容更新</em>「城市影像·黄昏篇」高清正版写真内容 11 月 18 日更新完毕
+        </div>
+        <div class="yg-newsbar-item">
+          <em>社区动态</em>创作者社区新增作品下载规则说明与授权指引，欢迎查阅
+        </div>
+      </div>
+      <a class="yg-newsbar-more" href="#yg-updates">查看全部更新</a>
+    </div>
+  </div>
+
+  <!-- 页头 -->
+  <header class="yg-header">
+    <div class="yg-header-inner">
+      <a class="yg-logo" href="#yg-home" aria-label="尤果网模特写真官方网站首页">
+        <span class="yg-logo-mark">尤果</span>
+        <span class="yg-logo-text">
+          <strong>尤果网模特写真</strong>
+          <span>YUGUO PORTRAIT</span>
+        </span>
+      </a>
+      <nav class="yg-nav" id="ygMainNav" aria-label="主导航">
+        <a href="#yg-home" class="is-current">首页</a>
+        <a href="#yg-focus">影像焦点</a>
+        <a href="#yg-topics">专题企划</a>
+        <a href="#yg-creators">创作者</a>
+        <a href="#yg-wall">作品墙</a>
+        <a href="#yg-updates">企业动态</a>
+        <a href="#yg-faq">帮助中心</a>
+        <a href="#yg-contact">联系我们</a>
+      </nav>
+      <div class="yg-header-tools">
+        <div class="yg-search">
+          <input type="search" id="ygSearchInput" placeholder="搜索写真、创作者、专题" aria-label="站内搜索">
+          <button type="button" id="ygSearchBtn">搜索</button>
+        </div>
+        <button class="yg-menu-toggle" id="ygMenuToggle" aria-label="展开导航菜单" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="yg-search-tip" id="ygSearchTip" aria-live="polite"></div>
+  </header>
+</div>
+
+<main>
+  <!-- 首屏 -->
+  <section class="yg-hero" id="yg-home">
+    <div class="yg-wrap">
+      <div class="yg-hero-grid">
+        <div>
+          <span class="yg-hero-tag">官方网站 · 品牌门户 · 原创正版</span>
+          <h1>尤果网模特写真</h1>
+          <p class="yg-hero-sub">以镜头记录真实表达，以影像构建模特写真内容生态。</p>
+          <p class="yg-hero-desc">
+            尤果网模特写真官方网站是面向模特写真领域的<strong>视频品牌与影像内容平台</strong>。
+            我们深耕人像影像与模特写真垂类，围绕影像创作、创作者成长与内容生态持续投入，
+            为创作者、模特与企业品牌搭建高品质的正版高清内容家园。作为行业领先的原创内容社区，
+            平台坚持真实、温暖、专业的表达方式，以匠心打磨每一帧影像。
+          </p>
+          <div class="yg-hero-actions">
+            <a class="yg-btn yg-btn-primary" href="#yg-focus">进入影像焦点</a>
+            <a class="yg-btn yg-btn-ghost" href="#yg-topics">浏览专题企划</a>
+            <a class="yg-btn yg-btn-gold" href="#yg-creators">认识创作者</a>
+          </div>
+          <div class="yg-hero-stats">
+            <div class="yg-stat"><b data-yg-count="12800">12,800<small>+</small></b><span>高清影像作品</span></div>
+            <div class="yg-stat"><b data-yg-count="326">326<small>位</small></b><span>签约创作者</span></div>
+            <div class="yg-stat"><b data-yg-count="260">260<small>万</small></b><span>社区用户陪伴</span></div>
+          </div>
+        </div>
+        <div class="yg-hero-visual">
+          <figure class="yg-hero-frame">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 600'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232b3448'/%3E%3Cstop offset='.55' stop-color='%234d5f86'/%3E%3Cstop offset='1' stop-color='%23c98a4b'/%3E%3C/linearGradient%3E%3CradialGradient id='r1' cx='.32' cy='.28' r='.7'%3E%3Cstop offset='0' stop-color='%23ffe3bd' stop-opacity='.55'/%3E%3Cstop offset='1' stop-color='%23ffe3bd' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='480' height='600' fill='url(%23g1)'/%3E%3Crect width='480' height='600' fill='url(%23r1)'/%3E%3Ccircle cx='240' cy='212' r='86' fill='%23f2d7b4' opacity='.92'/%3E%3Cpath d='M240 300c-72 0-124 44-140 128h280c-16-84-68-128-140-128z' fill='%23e8c39b' opacity='.92'/%3E%3Cpath d='M160 182c14-34 44-52 80-52s66 18 80 52c-26-16-52-24-80-24s-54 8-80 24z' fill='%233c2f2a' opacity='.9'/%3E%3Ccircle cx='240' cy='212' r='86' fill='none' stroke='%23fff' stroke-opacity='.25' stroke-width='2'/%3E%3Cpath d='M92 470h296' stroke='%23fff' stroke-opacity='.3' stroke-width='2' stroke-dasharray='6 8'/%3E%3Ccircle cx='118' cy='120' r='5' fill='%23f0dcc4' opacity='.8'/%3E%3Ccircle cx='374' cy='96' r='3.5' fill='%23f0dcc4' opacity='.6'/%3E%3C/svg%3E" alt="尤果网模特写真品牌主视觉：暖金与深蓝渐变中的模特人像剪影">
+            <figcaption class="yg-hero-frame-info">
+              <span>BRAND VISUAL · 2026</span>
+              <strong>光影之间 · 品牌年度主视觉</strong>
+            </figcaption>
+          </figure>
+          <div class="yg-hero-float">
+            <b>4.9 / 5.0</b>
+            <span>社区口碑评分 · 12,000+ 用户评价</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关键词深度解析 -->
+  <section class="yg-section yg-about" id="yg-about">
+    <div class="yg-wrap">
+      <div class="yg-about-grid">
+        <aside class="yg-about-aside">
+          <div class="yg-eyebrow">About the Brand</div>
+          <h2>关于「尤果网模特写真」的定位与解析</h2>
+          <p>一个把模特写真当作长期事业来经营的视频品牌，如何理解内容、创作者与用户之间的关系。</p>
+          <div class="yg-badge-list">
+            <span class="yg-badge">官方网站</span>
+            <span class="yg-badge">原创正版</span>
+            <span class="yg-badge">高清精品</span>
+            <span class="yg-badge">内容生态</span>
+            <span class="yg-badge">行业领先</span>
+            <span class="yg-badge">用户至上</span>
+            <span class="yg-badge">持续运营</span>
+          </div>
+        </aside>
+        <div class="yg-about-text">
+          <h3>一、品牌定位：一个专注人像影像的视频品牌门户</h3>
+          <p>
+            「尤果网模特写真」不是一个单一的图片集合站，而是一个以模特写真为核心、以视频为重要表达形式的<strong>品牌官方门户</strong>。
+            它同时承担着三重角色：对外，它是企业品牌形象的展示窗口；对内，它是创作者与模特协作的创作基地；
+            对用户，它是一个可以长期停留、反复回访的影像社区。三者叠加，构成了尤果网模特写真在垂类赛道中的独特位置。
+          </p>
+          <p>
+            在内容方向上，我们坚持“<strong>以人为主角、以光为语言</strong>”。模特写真看似是视觉体裁，实质是人像关系与情绪表达的艺术。
+            因此平台在内容结构上既保留棚拍的精度与质感，也大量投入城市探索、自然户外、日常生活场景中的记录型拍摄。
+            让写真不被“摆拍”两个字局限，而是成为一种真实、可被感知的影像叙事。
+          </p>
+          <h3>二、内容生态：从单体创作到长期企划</h3>
+          <p>
+            尤果网模特写真的内容生态由三个层次构成。第一层是<strong>单体作品</strong>，每次拍摄都是一次完整的创作闭环，从主题策划、造型设计到成片发布，
+            均遵循统一的品质标准；第二层是<strong>系列企划</strong>，例如「光影之间」「城市影像·黄昏篇」等按季度推进的专题内容；第三层是<strong>社区共创</strong>，
+            由创作者自主发起话题与挑战，平台提供资源与曝光支持。三层结构让内容既有稳定的品质下限，也有持续的活力上限。
+          </p>
+          <p>
+            我们相信，真正有生命力的内容平台不会只依赖某一批头部创作者，而应形成<strong>持续有新面孔出现、有新人被看见</strong>的良性循环。
+            因此在创作者扶持上，平台设置了新人推荐位、作品评审机制与创作激励计划，让更多有想法的模特写真创作者能够被社区认识。
+          </p>
+          <h3>三、品质标准：高清、正版与专业</h3>
+          <p>
+            影像品质是模特写真内容的生命线。尤果网模特写真在画面清晰度、色彩管理、后期统一性上建立了明确的技术规范，
+            所有上架内容均经过成片审核与授权核验，确保<strong>高清正版</strong>。同时，平台与模特、摄影团队签署规范的合作协议，
+            在作品使用范围、署名方式与二次传播上给予充分保障。这不仅是对创作者劳动的尊重，也构成了品牌口碑的基础。
+          </p>
+          <p>
+            在专业性上，平台将摄影、造型、修图、剪辑等环节拆分为可协作的工种，鼓励创作者以团队形式完成作品。
+            这种专业分工让模特写真从“个人爱好”逐步走向“可持续的内容生产”，也让更多企业客户愿意选择尤果网模特写真作为合作平台。
+          </p>
+          <h3>四、社区文化：真实、温暖、包容</h3>
+          <p>
+            相比追求流量的短平快内容，我们更在意社区长期的气质。尤果网模特写真倡导<strong>真实表达与相互尊重</strong>，
+            拒绝过度修图与失真的审美导向，鼓励创作者呈现模特本人的个性与状态。评论区与话题区设置了友善互动规范，
+            对恶意评价与不尊重言论进行管理，让社区保持温暖、包容的气氛。
+          </p>
+          <p>
+            我们还长期运营“创作幕后”栏目，把镜头之外的故事讲给用户听——一次拍摄的选址过程、一套造型的打版细节、
+            一位新人模特第一次面对镜头的紧张。这些内容让社区成员之间的关系不只是“看与被看”，而是真正意义上的陪伴与成长。
+          </p>
+          <h3>五、未来方向：让模特写真成为被认真对待的影像门类</h3>
+          <p>
+            模特写真在很长时间里被简单归类，但在尤果网模特写真的理解中，它完全可以承载更丰富的表达：城市的气质、时代的审美、
+            个体的自信与松弛。未来平台将继续在<strong>原创企划、创作者成长、企业合作</strong>三条线上投入，
+            以持续运营的耐心，把这个垂直领域做深、做透，做成一个值得信赖、用户首选的影像内容品牌。
+          </p>
+          <div class="yg-about-quote">
+            “我们记录的不是完美的脸，而是一个人在镜头前最放松、最像自己的那一刻。”——尤果网模特写真 内容团队
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 影像焦点 -->
+  <section class="yg-section" id="yg-focus">
+    <div class="yg-wrap">
+      <div class="yg-section-head">
+        <div>
+          <div class="yg-eyebrow">Focus</div>
+          <h2>影像焦点 · 本周重点企划</h2>
+          <p>编辑部与创作者共同挑选的重点内容，覆盖棚拍、城市、自然与日常四类场景。</p>
+        </div>
+        <a class="yg-btn yg-btn-ghost" href="#yg-videos">查看全部作品</a>
+      </div>
+      <div class="yg-focus-grid">
+        <article class="yg-focus-main">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='f1' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23f6e6d2'/%3E%3Cstop offset='1' stop-color='%23c98a4b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23f1)'/%3E%3Ccircle cx='560' cy='170' r='120' fill='%23fff3e2' opacity='.75'/%3E%3Crect x='90' y='300' width='620' height='6' fill='%23222a3a' opacity='.16'/%3E%3Cpath d='M250 410c0-70 40-110 100-110s100 40 100 110z' fill='%232b3448' opacity='.82'/%3E%3Ccircle cx='350' cy='228' r='58' fill='%232b3448' opacity='.82'/%3E%3Cpath d='M470 410c0-56 32-88 80-88s80 32 80 88z' fill='%237a4a68' opacity='.7'/%3E%3Ccircle cx='550' cy='270' r='44' fill='%237a4a68' opacity='.7'/%3E%3Cpath d='M120 130h180' stroke='%23222a3a' stroke-width='3' opacity='.35'/%3E%3C/svg%3E" alt="专题《光影之间》棚拍人像主封面，暖金背景中的人物剪影">
+          <div class="yg-focus-main-info">
+            <span class="yg-chip">专题企划</span>
+            <h3>光影之间 · 十二位创作者联合影像计划</h3>
+            <p>以同一组光位方案，让十二位创作者拍摄各自理解的“下午四点”。棚拍与自然光交错，呈现模特写真在光线语言上的可能性。</p>
+          </div>
+        </article>
+        <div class="yg-focus-side">
+          <article class="yg-focus-mini">
+            <div class="yg-focus-mini-thumb">
+              <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%233f5c8a'/%3E%3Crect y='130' width='320' height='70' fill='%23263044'/%3E%3Ccircle cx='250' cy='58' r='26' fill='%23f0dcc4' opacity='.85'/%3E%3Cpath d='M40 130l40-46 40 46zM96 130l50-58 50 58z' fill='%23c3d1e8' opacity='.5'/%3E%3C/svg%3E" alt="城市黄昏外景写真小封面，蓝灰天空与楼宇剪影">
+            </div>
+            <div class="yg-focus-mini-body">
+              <span class="yg-chip">城市探索</span>
+              <h4>城市影像·黄昏篇：在天台等一场光</h4>
+              <p>记录三位模特与摄影师在天台的四小时，从硬光到蓝调时刻。</p>
+              <div class="yg-focus-mini-meta">摄影：林见山 · 更新至第 6 期</div>
+            </div>
+          </article>
+          <article class="yg-focus-mini">
+            <div class="yg-focus-mini-thumb">
+              <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%23dce9d8'/%3E%3Cpath d='M0 150c60-30 110 10 170-16s100-6 150 10v56H0z' fill='%236f8f6a' opacity='.7'/%3E%3Ccircle cx='160' cy='88' r='34' fill='%23fff' opacity='.8'/%3E%3Cpath d='M130 200c0-40 12-62 30-62s30 22 30 62z' fill='%235b7357'/%3E%3C/svg%3E" alt="自然光户外写真小封面，绿意背景中的白色人物轮廓">
+            </div>
+            <div class="yg-focus-mini-body">
+              <span class="yg-chip">治愈影像</span>
+              <h4>一整天的自然光：公园里的松弛感</h4>
+              <p>不用补光、不喊口令，只跟随模特的节奏完成一次拍摄。</p>
+              <div class="yg-focus-mini-meta">摄影：周霈 · 播放 18.6 万</div>
+            </div>
+          </article>
+          <article class="yg-focus-mini">
+            <div class="yg-focus-mini-thumb">
+              <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200'%3E%3Crect width='320' height='200' fill='%23f3e4ea'/%3E%3Crect x='36' y='40' width='248' height='124' rx='8' fill='%23fff' opacity='.7'/%3E%3Ccircle cx='120' cy='100' r='30' fill='%237a4a68' opacity='.75'/%3E%3Ccircle cx='200' cy='100' r='30' fill='%23c98a4b' opacity='.65'/%3E%3C/svg%3E" alt="创作幕后访谈小封面，粉紫背景上的两个人物色块">
+            </div>
+            <div class="yg-focus-mini-body">
+              <span class="yg-chip">创作幕后</span>
+              <h4>从草图到成片：一套写真造型的诞生</h4>
+              <p>造型师与模特对谈，聊聊一件衣服如何决定整组照片的情绪。</p>
+              <div class="yg-focus-mini-meta">嘉宾：苏未 · 时长 12:40</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 热门作品流 -->
+  <section class="yg-section yg-about" id="yg-videos">
+    <div class="yg-wrap">
+      <div class="yg-section-head">
+        <div>
+          <div class="yg-eyebrow">Trending</div>
+          <h2>社区热度作品 · 模特写真精选</h2>
+          <p>按近七日社区互动热度排序，标注主题与场景，方便你快速找到感兴趣的方向。</p>
+        </div>
+        <a class="yg-btn yg-btn-ghost" href="#yg-wall">进入作品墙</a>
+      </div>
+      <div class="yg-video-grid" id="ygVideoGrid">
+
+        <article class="yg-video-card">
+          <div class="yg-video-cover">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23222a3a'/%3E%3Ccircle cx='240' cy='120' r='62' fill='%23f0dcc4'/%3E%3Cpath d='M160 270c0-62 36-100 80-100s80 38 80 100z' fill='%23c98a4b' opacity='.85'/%3E%3Crect x='0' y='0' width='480' height='270' fill='url(%23none)'/%3E%3Cpath d='M0 220h480' stroke='%23fff' stroke-opacity='.15' stroke-width='2'/%3E%3C/svg%3E" alt="棚拍作品《午后的白墙》封面，暖色人像与浅色背景">
+            <span class="yg-chip">棚拍</span>
+            <div class="yg-play"><i></i></div>
+          </div>
+          <div class="yg-video-body">
+            <h3>午后的白墙：一组安静的室内人像</h3>
+            <p>只用一扇窗的自然光完成整组拍摄，模特在镜头前的松弛状态被完整保留。</p>
+            <div class="yg-video-meta">
+              <div class="yg-author">
+                <span class="yg-avatar" style="background:#3f5c8a">林</span>林见山
+              </div>
+              <div class="yg-video-actions">
+                <button class="yg-icon-btn" data-yg-like data-count="326" type="button"><span class="yg-count">326</span>赞</button>
+                <button class="yg-icon-btn" data-yg-fav type="button">收藏</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="yg-video-card">
+          <div class="yg-video-cover">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23334a63'/%3E%3Crect y='170' width='480' height='100' fill='%231e2a3a'/%3E%3Ccircle cx='360' cy='70' r='34' fill='%23f3d7a8' opacity='.9'/%3E%3Cpath d='M70 170l70-82 70 82zM180 170l60-70 60 70z' fill='%234a6685' opacity='.8'/%3E%3C/svg%3E" alt="城市夜景写真《霓虹之后》封面，蓝调夜色与街灯">
+            <span class="yg-chip">城市探索</span>
+            <div class="yg-play"><i></i></div>
+          </div>
+          <div class="yg-video-body">
+            <h3>霓虹之后：街头夜景人像的三种拍法</h3>
+            <p>从高感光到慢门跟拍，拆解夜间街头写真的光线控制与走动节奏。</p>
+            <div class="yg-video-meta">
+              <div class="yg-author">
+                <span class="yg-avatar" style="background:#7a4a68">苏</span>苏未
+              </div>
+              <div class="yg-video-actions">
+                <button class="yg-icon-btn" data-yg-like data-count="284" type="button"><span class="yg-count">284</span>赞</button>
+                <button class="yg-icon-btn" data-yg-fav type="button">收藏</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="yg-video-card">
+          <div class="yg-video-cover">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23eef2e8'/%3E%3Cpath d='M0 190c90-40 150 12 240-14s150-8 240 14v80H0z' fill='%233f5c3a' opacity='.55'/%3E%3Ccircle cx='240' cy='112' r='48' fill='%23fff' opacity='.9'/%3E%3Cpath d='M206 270c0-52 16-82 34-82s34 30 34 82z' fill='%232f4a2c'/%3E%3C/svg%3E" alt="户外写真《风穿过草地》封面，绿色草原与白色人影">
+            <span class="yg-chip">户外</span>
+            <div class="yg-play"><i></i></div>
+          </div>
+          <div class="yg-video-body">
+            <h3>风穿过草地：一次没有脚本的户外拍摄</h3>
+            <p>模特自己走位、自己决定停留的瞬间，摄影只负责记录。附完整路线与器材清单。</p>
+            <div class="yg-video-meta">
+              <div class="yg-author">
+                <span class="yg-avatar" style="background:#3f5c3a">周</span>周霈
+              </div>
+              <div class="yg-video-actions">
+                <button class="yg-icon-btn" data-yg-like data-count="512" type="button"><span class="yg-count">512</span>赞</button>
+                <button class="yg-icon-btn" data-yg-fav type="button">收藏</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="yg-video-card">
+          <div class="yg-video-cover">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23f6efe6'/%3E%3Crect x='60' y='40' width='150' height='190' rx='6' fill='%23e6d6c0'/%3E%3Crect x='240' y='70' width='180' height='150' rx='6' fill='%23d8c3a8'/%3E%3Ccircle cx='135' cy='110' r='26' fill='%238a6a4a' opacity='.7'/%3E%3Ccircle cx='330' cy='140' r='30' fill='%236f5640' opacity='.6'/%3E%3C/svg%3E" alt="家居场景写真《一个人的房间》封面，米色室内与家具轮廓">
+            <span class="yg-chip">日常记录</span>
+            <div class="yg-play"><i></i></div>
+          </div>
+          <div class="yg-video-body">
+            <h3>一个人的房间：把日常拍成写真</h3>
+            <p>不借影棚，在真实居住空间里完成拍摄，讲述家居场景中的光线与情绪。</p>
+            <div class="yg-video-meta">
+              <div class="yg-author">
+                <span class="yg-avatar" style="background:#c98a4b">叶</span>叶苜
+              </div>
+              <div class="yg-video-actions">
+                <button class="yg-icon-btn" data-yg-like data-count="198" type="button"><span class="yg-count">198</span>赞</button>
+                <button class="yg-icon-btn" data-yg-fav type="button">收藏</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="yg-video-card">
+          <div class="yg-video-cover">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%232a2136'/%3E%3Ccircle cx='240' cy='135' r='76' fill='%23ff9e6e' opacity='.2'/%3E%3Ccircle cx='240' cy='135' r='46' fill='%23f0dcc4' opacity='.9'/%3E%3Cpath d='M180 270c0-52 28-86 60-86s60 34 60 86z' fill='%23c25e7a' opacity='.85'/%3E%3Ccircle cx='96' cy='80' r='8' fill='%23ffb98a' opacity='.7'/%3E%3Ccircle cx='392' cy='196' r='6' fill='%23ffb98a' opacity='.6'/%3E%3C/svg%3E" alt="艺术写真《色块计划》封面，深紫背景与橙粉人物色块">
+            <span class="yg-chip">艺术美学</span>
+            <div class="yg-play"><i></i></div>
+          </div>
+          <div class="yg-video-body">
+            <h3>色块计划：用颜色重新理解人像构图</h3>
+            <p>把模特当作画面中的色块，重新思考留白、比例与视觉重心的关系。</p>
+            <div class="yg-video-meta">
+              <div class="yg-author">
+                <span class="yg-avatar" style="background:#7a4a68">程</span>程也
+              </div>
+              <div class="yg-video-actions">
+                <button class="yg-icon-btn" data-yg-like data-count="437" type="button"><span class="yg-count">437</span>赞</button>
+                <button class="yg-icon-btn" data-yg-fav type="button">收藏</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="yg-video-card">
+          <div class="yg-video-cover">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23e9eef5'/%3E%3Crect x='40' y='160' width='400' height='110' fill='%23c9d4e4'/%3E%3Crect x='80' y='80' width='110' height='80' rx='6' fill='%23fff'/%3E%3Crect x='220' y='100' width='150' height='60' rx='6' fill='%23fff' opacity='.8'/%3E%3Ccircle cx='140' cy='200' r='22' fill='%233f5c8a' opacity='.7'/%3E%3C/svg%3E" alt="访谈内容《写真之后》封面，浅蓝工作室场景与人物剪影">
+            <span class="yg-chip">人物访谈</span>
+            <div class="yg-play"><i></i></div>
+          </div>
+          <div class="yg-video-body">
+            <h3>写真之后：与三位模特的职业对谈</h3>
+            <p>聊工作节奏、镜头前的心理建设，以及她们如何看待“被记录”这件事。</p>
+            <div class="yg-video-meta">
+              <div class="yg-author">
+                <span class="yg-avatar" style="background:#3f5c8a">编</span>编辑部
+              </div>
+              <div class="yg-video-actions">
+                <button class="yg-icon-btn" data-yg-like data-count="611" type="button"><span class="yg-count">611</span>赞</button>
+                <button class="yg-icon-btn" data-yg-fav type="button">收藏</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 专题企划 -->
+  <section class="yg-section yg-topic-bg" id="yg-topics">
+    <div class="yg-wrap">
+      <div class="yg-section-head">
+        <div>
+          <div class="yg-eyebrow">Projects</div>
+          <h2>专题企划 · 正在进行中的长期内容</h2>
+          <p>每个专题由平台发起、创作者参与，按季度推进，持续更新。</p>
+        </div>
+      </div>
+      <div class="yg-topic-grid">
+        <article class="yg-topic-card">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 300'%3E%3Crect width='360' height='300' fill='%23b9803f'/%3E%3Ccircle cx='180' cy='110' r='66' fill='%23ffe6c2' opacity='.7'/%3E%3Cpath d='M110 300c0-70 32-110 70-110s70 40 70 110z' fill='%232b3448' opacity='.8'/%3E%3C/svg%3E" alt="专题《光影之间》封面，暖橙色调与人物剪影">
+          <span class="yg-chip">进行中</span>
+          <h3>光影之间</h3>
+          <p>十二位创作者用同一组光位方案，拍摄各自理解的“下午四点”。</p>
+          <span class="yg-topic-state">已更新 8 / 12 期</span>
+        </article>
+        <article class="yg-topic-card">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 300'%3E%3Crect width='360' height='300' fill='%232c3e57'/%3E%3Crect y='190' width='360' height='110' fill='%2317202e'/%3E%3Ccircle cx='280' cy='80' r='26' fill='%23f3d7a8'/%3E%3Cpath d='M30 190l56-64 56 64zM120 190l48-52 48 52z' fill='%233f5c8a' opacity='.8'/%3E%3C/svg%3E" alt="专题《城市影像·黄昏篇》封面，深蓝夜色与城市天际线">
+          <span class="yg-chip">更新中</span>
+          <h3>城市影像 · 黄昏篇</h3>
+          <p>从硬光到蓝调时刻，记录不同城市天台上的四小时。</p>
+          <span class="yg-topic-state">已更新 6 期</span>
+        </article>
+        <article class="yg-topic-card">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 300'%3E%3Crect width='360' height='300' fill='%23e7d6dd'/%3E%3Crect x='50' y='60' width='260' height='180' rx='10' fill='%23fff' opacity='.75'/%3E%3Ccircle cx='140' cy='140' r='34' fill='%237a4a68' opacity='.7'/%3E%3Ccircle cx='228' cy='150' r='26' fill='%23c98a4b' opacity='.65'/%3E%3C/svg%3E" alt="专题《创作幕后》封面，浅粉背景与两个人物色块">
+          <span class="yg-chip">长期企划</span>
+          <h3>创作幕后</h3>
+          <p>把镜头之外的故事讲出来：选址、造型、沟通与临场判断。</p>
+          <span class="yg-topic-state">每周更新</span>
+        </article>
+        <article class="yg-topic-card">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 300'%3E%3Crect width='360' height='300' fill='%23dfe9d9'/%3E%3Cpath d='M0 220c80-36 130 12 200-12s120-6 160 12v80H0z' fill='%236f8f6a' opacity='.75'/%3E%3Ccircle cx='180' cy='120' r='42' fill='%23fff' opacity='.85'/%3E%3C/svg%3E" alt="专题《自然光计划》封面，浅绿背景与白色人物轮廓">
+          <span class="yg-chip">报名中</span>
+          <h3>自然光计划</h3>
+          <p>不依赖补光灯的户外人像创作，面向全部社区创作者开放报名。</p>
+          <span class="yg-topic-state">距报名截止 12 天</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作者矩阵 -->
+  <section class="yg-section" id="yg-creators">
+    <div class="yg-wrap">
+      <div class="yg-section-head">
+        <div>
+          <div class="yg-eyebrow">Creators</div>
+          <h2>创作者矩阵 · 官方签约影像作者</h2>
+          <p>他们来自摄影、造型、剪辑等不同背景，共同构成尤果网模特写真的内容生态。</p>
+        </div>
+        <a class="yg-btn yg-btn-ghost" href="#yg-contact">申请成为创作者</a>
+      </div>
+      <div class="yg-creator-grid">
+        <article class="yg-creator-card">
+          <div class="yg-creator-avatar" style="background:linear-gradient(140deg,#3f5c8a,#7d9bc9)">林</div>
+          <h3>林见山</h3>
+          <div class="yg-creator-role">人像摄影 · 棚拍</div>
+          <p>十年棚拍经验，擅长用单一光源构建安静的画面情绪，作品以克制著称。</p>
+          <div class="yg-creator-stats">
+            <div><b>184</b>作品</div><div><b>9.6万</b>关注</div>
+          </div>
+          <button class="yg-creator-more" data-yg-author="林见山" type="button">查看作者档案</button>
+        </article>
+        <article class="yg-creator-card">
+          <div class="yg-creator-avatar" style="background:linear-gradient(140deg,#7a4a68,#c184a8)">苏</div>
+          <h3>苏未</h3>
+          <div class="yg-creator-role">街头影像 · 夜景</div>
+          <p>喜欢在夜里工作，用高感光与慢门记录城市的另一面，节奏感强烈。</p>
+          <div class="yg-creator-stats">
+            <div><b>152</b>作品</div><div><b>7.2万</b>关注</div>
+          </div>
+          <button class="yg-creator-more" data-yg-author="苏未" type="button">查看作者档案</button>
+        </article>
+        <article class="yg-creator-card">
+          <div class="yg-creator-avatar" style="background:linear-gradient(140deg,#3f5c3a,#8fb488)">周</div>
+          <h3>周霈</h3>
+          <div class="yg-creator-role">户外写真 · 记录</div>
+          <p>长期在自然场景拍摄，主张“不喊口令”，让模特自己完成走位与停留。</p>
+          <div class="yg-creator-stats">
+            <div><b>131</b>作品</div><div><b>6.4万</b>关注</div>
+          </div>
+          <button class="yg-creator-more" data-yg-author="周霈" type="button">查看作者档案</button>
+        </article>
+        <article class="yg-creator-card">
+          <div class="yg-creator-avatar" style="background:linear-gradient(140deg,#c98a4b,#e8bd8c)">叶</div>
+          <h3>叶苜</h3>
+          <div class="yg-creator-role">家居场景 · 日常</div>
+          <p>把写真放进真实生活空间，用家具、窗帘与光线讲一个人的状态。</p>
+          <div class="yg-creator-stats">
+            <div><b>96</b>作品</div><div><b>5.1万</b>关注</div>
+          </div>
+          <button class="yg-creator-more" data-yg-author="叶苜" type="button">查看作者档案</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 作品墙 -->
+  <section class="yg-section" id="yg-wall">
+    <div class="yg-wrap">
+      <div class="yg-wall">
+        <div class="yg-section-head">
+          <div>
+            <div class="yg-eyebrow">Gallery</div>
+            <h2>作品墙 · 社区影像切片</h2>
+            <p>来自不同创作者、不同场景的影像片段，构成这个社区此刻的样子。</p>
+          </div>
+          <a class="yg-btn yg-btn-gold" href="#yg-contact">上传你的作品</a>
+        </div>
+        <div class="yg-wall-grid">
+          <div class="yg-wall-item w-lg">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 480'%3E%3Cdefs%3E%3ClinearGradient id='w1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f3dcc2'/%3E%3Cstop offset='1' stop-color='%23c98a4b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='480' fill='url(%23w1)'/%3E%3Ccircle cx='250' cy='200' r='86' fill='%23fff' opacity='.55'/%3E%3Cpath d='M150 480c0-96 46-152 94-152s94 56 94 152z' fill='%232b3448' opacity='.78'/%3E%3C/svg%3E" alt="作品墙大图：暖金色调下的模特人像剪影">
+            <span>光影之间 · 第 08 期</span>
+          </div>
+          <div class="yg-wall-item w-md">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%232c3e57'/%3E%3Crect y='210' width='400' height='90' fill='%2317202e'/%3E%3Ccircle cx='300' cy='86' r='28' fill='%23f3d7a8' opacity='.9'/%3E%3Cpath d='M40 210l60-70 60 70z' fill='%233f5c8a' opacity='.7'/%3E%3C/svg%3E" alt="作品墙中图：城市夜色中的街灯与楼宇轮廓">
+            <span>城市影像 · 黄昏篇</span>
+          </div>
+          <div class="yg-wall-item w-sm">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23dfe9d9'/%3E%3Cpath d='M0 230c80-40 140 12 210-14s130-8 190 14v70H0z' fill='%236f8f6a' opacity='.8'/%3E%3Ccircle cx='200' cy='130' r='44' fill='%23fff' opacity='.85'/%3E%3C/svg%3E" alt="作品墙中图：草地上的白色人影与绿意背景">
+            <span>自然光计划 · 试拍</span>
+          </div>
+          <div class="yg-wall-item w-sm">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23f3e4ea'/%3E%3Crect x='60' y='50' width='280' height='200' rx='10' fill='%23fff' opacity='.7'/%3E%3Ccircle cx='160' cy='150' r='36' fill='%237a4a68' opacity='.7'/%3E%3Ccircle cx='250' cy='160' r='28' fill='%23c98a4b' opacity='.6'/%3E%3C/svg%3E" alt="作品墙中图：粉紫背景中的双人色块构图">
+            <span>创作幕后 · 造型对谈</span>
+          </div>
+          <div class="yg-wall-item w-sm2">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23e9eef5'/%3E%3Crect y='180' width='480' height='90' fill='%23c9d4e4'/%3E%3Crect x='70' y='70' width='120' height='110' rx='8' fill='%23fff'/%3E%3Ccircle cx='130' cy='126' r='26' fill='%233f5c8a' opacity='.65'/%3E%3Crect x='260' y='90' width='160' height='90' rx='8' fill='%23fff' opacity='.8'/%3E%3C/svg%3E" alt="作品墙宽图：浅蓝工作室内的人像与窗景">
+            <span>棚拍日常 · 第四组</span>
+          </div>
+          <div class="yg-wall-item w-sm">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%232a2136'/%3E%3Ccircle cx='200' cy='150' r='80' fill='%23ff9e6e' opacity='.2'/%3E%3Ccircle cx='200' cy='150' r='44' fill='%23f0dcc4' opacity='.9'/%3E%3Cpath d='M140 300c0-56 26-92 60-92s60 36 60 92z' fill='%23c25e7a' opacity='.85'/%3E%3C/svg%3E" alt="作品墙中图：深紫背景与橙粉人物色块">
+            <span>色块计划 · 第二组</span>
+          </div>
+          <div class="yg-wall-item w-md">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23f6efe6'/%3E%3Crect x='50' y='40' width='130' height='220' rx='8' fill='%23e6d6c0'/%3E%3Crect x='210' y='80' width='140' height='180' rx='8' fill='%23d8c3a8'/%3E%3Ccircle cx='115' cy='120' r='30' fill='%238a6a4a' opacity='.65'/%3E%3C/svg%3E" alt="作品墙中图：米色家居空间里的单人人像">
+            <span>一个人的房间 · 完结</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 评论与故事 + 更新日志 -->
+  <section class="yg-section" id="yg-voices">
+    <div class="yg-wrap">
+      <div class="yg-section-head">
+        <div>
+          <div class="yg-eyebrow">Voices</div>
+          <h2>社区声音 · 用户评价与故事</h2>
+          <p>来自用户、创作者与合作方的真实反馈，语气与关注点各不相同。</p>
+        </div>
+      </div>
+      <div class="yg-review-grid">
+        <article class="yg-review-card">
+          <div class="yg-review-top">
+            <span class="yg-avatar" style="background:#3f5c8a">沈</span>
+            <div><b>沈之遥</b><br><span>摄影爱好者</span></div>
+          </div>
+          <div class="yg-review-stars">★★★★★</div>
+          <p>第一次看到把模特写真做成系列企划的平台，光影之间每一期我都追，能明显感到创作者在认真对待同一个主题。</p>
+        </article>
+        <article class="yg-review-card">
+          <div class="yg-review-top">
+            <span class="yg-avatar" style="background:#c98a4b">阿</span>
+            <div><b>阿岚</b><br><span>平面设计师</span></div>
+          </div>
+          <div class="yg-review-stars">★★★★★</div>
+          <p>画面质感很稳，色彩统一，做设计参考特别方便。高清正版这一点让我放心，用素材的时候不用担心来源问题。</p>
+        </article>
+        <article class="yg-review-card">
+          <div class="yg-review-top">
+            <span class="yg-avatar" style="background:#7a4a68">M</span>
+            <div><b>Momo</b><br><span>在读学生</span></div>
+          </div>
+          <div class="yg-review-stars">★★★★☆</div>
+          <p>喜欢看创作幕后，才知道一组照片背后要沟通那么多细节。希望以后能多一点新人模特的专题。</p>
+        </article>
+        <article class="yg-review-card">
+          <div class="yg-review-top">
+            <span class="yg-avatar" style="background:#3f5c3a">老</span>
+            <div><b>老汤</b><br><span>品牌市场负责人</span></div>
+          </div>
+          <div class="yg-review-stars">★★★★★</div>
+          <p>我们和尤果网模特写真合作过一次产品形象拍摄，从策划到成片流程规范，交付清晰，是值得信赖的合作方。</p>
+        </article>
+        <article class="yg-review-card">
+          <div class="yg-review-top">
+            <span class="yg-avatar" style="background:#2b3448">小</span>
+            <div><b>小满</b><br><span>自由撰稿人</span></div>
+          </div>
+          <div class="yg-review-stars">★★★★☆</div>
+          <p>《写真之后》那期访谈看完很受触动，模特讲自己第一次面对镜头的那段，真实、有力量，不像宣传稿。</p>
+        </article>
+        <article class="yg-review-card">
+          <div class="yg-review-top">
+            <span class="yg-avatar" style="background:#9a6a9a">程</span>
+            <div><b>程也</b><br><span>签约创作者</span></div>
+          </div>
+          <div class="yg-review-stars">★★★★★</div>
+          <p>平台对创作者很友好，评审反馈具体、不含糊，新人推荐位也给得实在。能感觉到是在长期做内容，而不是追热度。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 企业动态 + 合作 + FAQ -->
+  <section class="yg-section yg-about" id="yg-updates">
+    <div class="yg-wrap">
+      <div class="yg-about-grid">
+        <div>
+          <div class="yg-eyebrow">Newsroom</div>
+          <h2 style="font-size:27px;margin-bottom:22px">企业动态 · 官方发布</h2>
+          <div class="yg-log-list">
+            <div class="yg-log-item">
+              <time>2026.11.18</time>
+              <h3>「城市影像·黄昏篇」内容更新完毕</h3>
+              <p>本季共上线 14 组高清正版写真作品，覆盖 6 座城市的天台与江岸场景，全部作品已完成授权核验。</p>
+            </div>
+            <div class="yg-log-item">
+              <time>2026.11.10</time>
+              <h3>2026 尤果影像创意挑战赛开启报名</h3>
+              <p>面向全部社区创作者开放，主题为“我镜头里的真实”。参赛作品需为原创，报名与投稿通道同步开启。</p>
+            </div>
+            <div class="yg-log-item">
+              <time>2026.10.28</time>
+              <h3>创作者作品下载规则与授权指引发布</h3>
+              <p>为保障模特与创作者权益，平台更新了商用授权、署名方式与二次传播的说明，详情见帮助中心。</p>
+            </div>
+            <div class="yg-log-item">
+              <time>2026.10.12</time>
+              <h3>品牌年度企划《光影之间》上线</h3>
+              <p>联合 12 位签约创作者，以统一光位方案推进的长期影像企划，预计分四批完成全部内容发布。</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="yg-eyebrow">Partners</div>
+          <h2 style="font-size:24px;margin-bottom:16px">合作品牌与伙伴</h2>
+          <div class="yg-partner-strip">
+            <div class="yg-partner">光屿摄影器材</div>
+            <div class="yg-partner">白帆造型工作室</div>
+            <div class="yg-partner">澜影后期</div>
+            <div class="yg-partner">城市艺文空间</div>
+            <div class="yg-partner">南岸影像器材</div>
+            <div class="yg-partner">拾光打印</div>
+          </div>
+          <div class="yg-about-quote" style="margin-top:26px">
+            我们与合作伙伴共同维护内容标准：所有联合企划作品均标注拍摄器材、造型团队与后期团队，让创作过程可追溯。
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="yg-section" id="yg-faq">
+    <div class="yg-wrap">
+      <div class="yg-section-head">
+        <div>
+          <div class="yg-eyebrow">Help</div>
+          <h2>帮助中心 · 常见问题</h2>
+          <p>关于观看、投稿、授权与合作的常见疑问，点击标题展开查看。</p>
+        </div>
+      </div>
+      <div class="yg-faq">
+        <details open>
+          <summary>如何浏览尤果网模特写真的作品？</summary>
+          <p>在首页「影像焦点」与「社区热度作品」区域可以直接浏览近期重点内容，点击卡片进入作品详情页。作品墙按场景分类展示，也可以通过顶部搜索框按主题、创作者或关键词查找。</p>
+        </details>
+        <details>
+          <summary>投稿需要满足哪些条件？</summary>
+          <p>投稿作品需为原创，模特与摄影方均需具备完整授权。建议提供至少 15 张成片与拍摄说明（主题、场景、器材、团队分工）。平台会对成片质量与授权材料进行审核，通常在 5 个工作日内反馈。</p>
+        </details>
+        <details>
+          <summary>作品可以用于商业用途吗？</summary>
+          <p>平台内容均为正版授权内容，但不同作品的授权范围不同。若需用于商业场景，请通过「联系我们」提交使用需求，我们会协助对接创作者与模特方，出具授权说明。</p>
+        </details>
+        <details>
+          <summary>如何申请成为签约创作者？</summary>
+          <p>可通过页脚或联系模块的「申请成为创作者」入口提交个人资料与代表作品链接。我们更关注持续创作能力与对模特写真的理解，而非单纯的数量。</p>
+        </details>
+        <details>
+          <summary>平台对修图与后期有什么规范？</summary>
+          <p>我们倡导真实表达，反对过度修图与失真审美。允许对色彩、光影、皮肤质感进行合理调整，但不得改变人物基本形态与身份特征，具体规范可向编辑部索取。</p>
+        </details>
+        <details>
+          <summary>作品上传与下载功能如何使用？</summary>
+          <p>创作者登录后可上传作品并填写授权信息；用户如需下载高清素材，需在作品页确认使用范围并遵守署名要求。相关规则已在 2026 年 10 月更新。</p>
+        </details>
+        <details>
+          <summary>比赛与专题企划如何报名？</summary>
+          <p>关注公告条与「企业动态」区域的官方发布，报名通道开启后会在专题页提供入口。所有比赛均不收取报名费用，评审标准公开可查。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系与投稿 -->
+  <section class="yg-section" id="yg-contact">
+    <div class="yg-wrap">
+      <div class="yg-contact">
+        <div>
+          <div class="yg-eyebrow" style="color:#f0dcc4">Contact</div>
+          <h2>与尤果网模特写真一起创作</h2>
+          <p>无论是投稿、合作、授权咨询还是加入创作者社区，我们都欢迎你留下信息。作为持续运营的品牌平台，每一条来讯都会有专人跟进。</p>
+          <ul class="yg-contact-list">
+            <li><b>合作邮箱</b><span>brand@yuguo-portrait.example（合作与授权）</span></li>
+            <li><b>投稿咨询</b><span>creator@yuguo-portrait.example（创作者与投稿）</span></li>
+            <li><b>媒体联络</b><span>press@yuguo-portrait.example（媒体与报道）</span></li>
+            <li><b>工作时间</b><span>周一至周五 10:00–19:00，节假日顺延</span></li>
+          </ul>
+        </div>
+        <div class="yg-contact-actions">
+          <button class="yg-btn yg-btn-gold" type="button" data-yg-open="submit">提交投稿作品</button>
+          <button class="yg-btn yg-btn-ghost" type="button" data-yg-open="contact">合作与授权咨询</button>
+          <button class="yg-btn yg-btn-ghost" type="button" data-yg-open="feedback">意见反馈与举报</button>
+          <button class="yg-btn yg-btn-ghost" type="button" data-yg-share>分享本站给同好</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- 页脚 -->
+<footer class="yg-footer">
+  <div class="yg-wrap">
+    <div class="yg-footer-grid">
+      <div>
+        <div class="yg-footer-brand">
+          <span class="yg-logo-mark">尤果</span>
+          <strong style="color:#fff;font-size:15px">尤果网模特写真</strong>
+        </div>
+        <p>尤果网模特写真官方网站，专注模特写真影像内容生态，以原创、正版、高清为标准，陪伴创作者与社区用户共同成长。本页内容为企业品牌官方发布。</p>
+      </div>
+      <div>
+        <h3>内容导航</h3>
+        <ul>
+          <li><a href="#yg-focus">影像焦点</a></li>
+          <li><a href="#yg-videos">热度作品</a></li>
+          <li><a href="#yg-topics">专题企划</a></li>
+          <li><a href="#yg-wall">作品墙</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>关于平台</h3>
+        <ul>
+          <li><a href="#yg-about">品牌定位解析</a></li>
+          <li><a href="#yg-creators">创作者矩阵</a></li>
+          <li><a href="#yg-updates">企业动态</a></li>
+          <li><a href="#yg-faq">帮助中心</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>合作与联络</h3>
+        <ul>
+          <li><a href="#yg-contact">合作咨询</a></li>
+          <li><a href="#yg-contact">投稿入口</a></li>
+          <li><a href="#yg-contact">授权说明</a></li>
+          <li><a href="#yg-contact">意见反馈</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="yg-footer-bottom">
+      <span>© 2026 尤果网模特写真 官方网站 · 版权所有 · 持续运营中</span>
+      <span>内容均为原创正版，转载请注明来源与署名</span>
+    </div>
+  </div>
+</footer>
+
+<button class="yg-top-btn" id="ygTopBtn" aria-label="回到顶部">↑</button>
+<div class="yg-toast" id="ygToast" role="status" aria-live="polite"></div>
+
+<!-- 通用弹窗 -->
+<div class="yg-modal" id="ygModal" aria-hidden="true">
+  <div class="yg-modal-box" role="dialog" aria-modal="true" aria-labelledby="ygModalTitle">
+    <button class="yg-modal-close" id="ygModalClose" aria-label="关闭弹窗">×</button>
+    <h3 id="ygModalTitle">标题</h3>
+    <p id="ygModalDesc">描述</p>
+    <div id="ygModalBody"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var toastEl = document.getElementById('ygToast');
+  var toastTimer = null;
+  function showToast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('is-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){
+      toastEl.classList.remove('is-show');
+    }, 2200);
+  }
+
+  /* 公告条轮播 */
+  var newsItems = Array.prototype.slice.call(document.querySelectorAll('.yg-newsbar-item'));
+  var newsIndex = 0;
+  if(newsItems.length > 1){
+    setInterval(function(){
+      newsItems[newsIndex].classList.remove('is-active');
+      newsIndex = (newsIndex + 1) % newsItems.length;
+      newsItems[newsIndex].classList.add('is-active');
+    }, 4200);
+  }
+
+  /* 移动端导航 */
+  var menuToggle = document.getElementById('ygMenuToggle');
+  var mainNav = document.getElementById('ygMainNav');
+  menuToggle.addEventListener('click', function(){
+    var open = mainNav.classList.toggle('is-open');
+    menuToggle.classList.toggle('is-open', open);
+    menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  mainNav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A' && window.innerWidth <= 760){
+      mainNav.classList.remove('is-open');
+      menuToggle.classList.remove('is-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }
+    if(e.target.tagName === 'A'){
+      Array.prototype.forEach.call(mainNav.querySelectorAll('a'), function(a){
+        a.classList.remove('is-current');
+      });
+      e.target.classList.add('is-current');
+    }
+  });
+
+  /* 搜索反馈 */
+  var searchInput = document.getElementById('ygSearchInput');
+  var searchBtn = document.getElementById('ygSearchBtn');
+  var searchTip = document.getElementById('ygSearchTip');
+  var homeSection = document.getElementById('yg-home');
+  function doSearch(){
+    var kw = (searchInput.value || '').trim();
+    if(!kw){
+      searchTip.textContent = '请输入关键词，例如“棚拍”“城市黄昏”“林见山”';
+      return;
+    }
+    var cards = document.querySelectorAll('.yg-video-card, .yg-creator-card, .yg-topic-card');
+    var hits = 0;
+    Array.prototype.forEach.call(cards, function(card){
+      var text = card.textContent;
+      card.classList.remove('yg-search-match');
+      if(text.indexOf(kw) > -1){
+        hits++;
+        card.classList.add('yg-search-match');
+      }
+    });
+    if(hits > 0){
+      searchTip.textContent = '找到 ' + hits + ' 条与「' + kw + '」相关的内容，已高亮标记';
+      var first = document.querySelector('.yg-search-match');
+      if(first && first.scrollIntoView){
+        first.scrollIntoView({behavior:'smooth', block:'center'});
+      }
+    }else{
+      searchTip.textContent = '未找到与「' + kw + '」直接相关的内容，可试试“棚拍”“户外”“幕后”';
+    }
+  }
+  searchBtn.addEventListener('click', doSearch);
+  searchInput.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); doSearch(); }
+  });
+  searchInput.addEventListener('input', function(){
+    if(!searchInput.value.trim()){ searchTip.textContent = ''; }
+  });
+
+  /* 点赞 */
+  document.addEventListener('click', function(e){
+    var likeBtn = e.target.closest('[data-yg-like]');
+    if(likeBtn){
+      var countEl = likeBtn.querySelector('.yg-count');
+      var base = parseInt(likeBtn.getAttribute('data-count'), 10) || 0;
+      var on = likeBtn.classList.toggle('is-on');
+      countEl.textContent = on ? base + 1 : base;
+      if(on){ showToast('已点赞，感谢支持原创内容'); }
+      return;
+    }
+
+    /* 收藏 */
+    var favBtn = e.target.closest('[data-yg-fav]');
+    if(favBtn){
+      var on2 = favBtn.classList.toggle('is-on');
+      favBtn.textContent = on2 ? '已收藏' : '收藏';
+      showToast(on2 ? '已加入收藏，可在个人中心查看' : '已取消收藏');
+      return;
+    }
+
+    /* 作者档案 */
+    var authorBtn = e.target.closest('[data-yg-author]');
+    if(authorBtn){
+      openModal('author', authorBtn.getAttribute('data-yg-author'));
+      return;
+    }
+
+    /* 打开表单类弹窗 */
+    var openBtn = e.target.closest('[data-yg-open]');
+    if(openBtn){
+      openModal(openBtn.getAttribute('data-yg-open'));
+      return;
+    }
+
+    /* 分享 */
+    var shareBtn = e.target.closest('[data-yg-share]');
+    if(shareBtn){
+      var link = (location.origin && location.origin !== 'null' ? location.origin : '') + location.pathname + location.search;
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(link).then(function(){
+          showToast('链接已复制，可分享给微信、微博或 QQ 好友');
+        }).catch(function(){
+          showToast('分享链接：' + link);
+        });
+      }else{
+        showToast('分享链接：' + link);
+      }
+    }
+  });
+
+  /* 弹窗 */
+  var modal = document.getElementById('ygModal');
+  var modalTitle = document.getElementById('ygModalTitle');
+  var modalDesc = document.getElementById('ygModalDesc');
+  var modalBody = document.getElementById('ygModalBody');
+  var modalClose = document.getElementById('ygModalClose');
+
+  var authorData = {
+    '林见山':{role:'人像摄影 · 棚拍', works:'184', fans:'9.6万', bio:'十年棚拍经验，擅长用单一光源构建安静的画面情绪。代表作《午后的白墙》《光影之间·第08期》。'},
+    '苏未':{role:'街头影像 · 夜景', works:'152', fans:'7.2万', bio:'喜欢在夜里工作，用高感光与慢门记录城市的另一面。代表作《霓虹之后》《城市影像·黄昏篇》系列。'},
+    '周霈':{role:'户外写真 · 记录', works:'131', fans:'6.4万', bio:'长期在自然场景拍摄，主张不喊口令，让模特自己完成走位与停留。代表作《风穿过草地》。'},
+    '叶苜':{role:'家居场景 · 日常', works:'96', fans:'5.1万', bio:'把写真放进真实生活空间，用家具、窗帘与光线讲一个人的状态。代表作《一个人的房间》。'}
+  };
+
+  function openModal(type, name){
+    if(type === 'author'){
+      var d = authorData[name] || {role:'签约创作者', works:'—', fans:'—', bio:'尤果网模特写真签约影像创作者。'};
+      modalTitle.textContent = name + ' · 创作者档案';
+      modalDesc.textContent = d.role + '｜作品 ' + d.works + ' 组｜关注 ' + d.fans;
+      modalBody.innerHTML = '<p style="font-size:13.5px;color:#4a5266;line-height:1.85">' + d.bio + '</p>' +
+        '<div style="display:flex;gap:10px;margin-top:16px"><button class="yg-btn yg-btn-primary" type="button" data-yg-close>关闭</button></div>';
+    }else if(type === 'submit'){
+      modalTitle.textContent = '提交投稿作品';
+      modalDesc.textContent = '请填写基本信息，编辑部会在 5 个工作日内反馈审核结果。';
+      modalBody.innerHTML =
+        '<form class="yg-form" data-yg-form="submit">' +
+        '<div><label for="ygF1">创作者昵称</label><input id="ygF1" required placeholder="你的昵称"></div>' +
+        '<div><label for="ygF2">作品主题</label><input id="ygF2" required placeholder="例如：光影之间 / 棚拍日常"></div>' +
+        '<div><label for="ygF3">联系邮箱</label><input id="ygF3" type="email" required placeholder="用于接收审核反馈"></div>' +
+        '<div><label for="ygF4">作品说明</label><textarea id="ygF4" placeholder="拍摄场景、团队分工、授权情况"></textarea></div>' +
+        '<button class="yg-btn yg-btn-gold" type="submit">提交投稿</button>' +
+        '</form>';
+    }else if(type === 'contact'){
+      modalTitle.textContent = '合作与授权咨询';
+      modalDesc.textContent = '留下你的需求，我们会安排对接人联系你。';
+      modalBody.innerHTML =
+        '<form class="yg-form" data-yg-form="contact">' +
+        '<div><label for="ygC1">机构 / 姓名</label><input id="ygC1" required placeholder="品牌方或个人信息"></div>' +
+        '<div><label for="ygC2">需求类型</label><select id="ygC2"><option>品牌形象拍摄</option><option>内容授权使用</option><option>联合专题企划</option><option>其他合作</option></select></div>' +
+        '<div><label for="ygC3">联系方式</label><input id="ygC3" required placeholder="邮箱或电话"></div>' +
+        '<div><label for="ygC4">需求简述</label><textarea id="ygC4"></textarea></div>' +
+        '<button class="yg-btn yg-btn-primary" type="submit">提交需求</button>' +
+        '</form>';
+    }else if(type === 'feedback'){
+      modalTitle.textContent = '意见反馈与举报';
+      modalDesc.textContent = '我们重视社区体验，请描述你遇到的问题，平台会尽快处理。';
+      modalBody.innerHTML =
+        '<form class="yg-form" data-yg-form="feedback">' +
+        '<div><label for="ygB1">反馈类型</label><select id="ygB1"><option>内容问题举报</option><option>功能使用建议</option><option>授权与版权</option><option>其他</option></select></div>' +
+        '<div><label for="ygB2">详细描述</label><textarea id="ygB2" required placeholder="请尽量描述清楚，便于我们定位"></textarea></div>' +
+        '<button class="yg-btn yg-btn-primary" type="submit">提交反馈</button>' +
+        '</form>';
+    }
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(){
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+  modalClose.addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){
+    if(e.target === modal || e.target.closest('[data-yg-close]')){ closeModal(); }
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && modal.classList.contains('is-open')){ closeModal(); }
+  });
+
+  /* 表单提交模拟 */
+  document.addEventListener('submit', function(e){
+    var form = e.target.closest('[data-yg-form]');
+    if(!form){ return; }
+    e.preventDefault();
+    var type = form.getAttribute('data-yg-form');
+    var msg = type === 'submit' ? '投稿已提交，编辑部将尽快审核' :
+              type === 'contact' ? '需求已收到，我们会安排专人联系' :
+              '反馈已提交，感谢你的支持';
+    closeModal();
+    showToast(msg);
+    form.reset();
+  });
+
+  /* 回到顶部 */
+  var topBtn = document.getElementById('ygTopBtn');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 520){ topBtn.classList.add('is-show'); }
+    else{ topBtn.classList.remove('is-show'); }
+  }, {passive:true});
+  topBtn.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* 数字滚动 */
+  var counters = document.querySelectorAll('[data-yg-count]');
+  var counted = false;
+  function runCounters(){
+    if(counted){ return; }
+    counted = true;
+    Array.prototype.forEach.call(counters, function(el){
+      var target = parseInt(el.getAttribute('data-yg-count'), 10);
+      var suffix = el.querySelector('small');
+      var suffixHTML = suffix ? suffix.outerHTML : '';
+      var start = 0;
+      var step = Math.max(1, Math.ceil(target / 42));
+      var timer = setInterval(function(){
+        start += step;
+        if(start >= target){
+          start = target;
+          clearInterval(start);
+        }
+        el.innerHTML = start.toLocaleString('en-US') + suffixHTML;
+      }, 28);
+    });
+  }
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){ runCounters(); io.disconnect(); }
+      });
+    }, {threshold:.3});
+    io.observe(homeSection);
+  }else{
+    runCounters();
+  }
+
+})();
+</script>
+</body>
+            </html>
